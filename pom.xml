@@ -30,6 +30,19 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+         <repository>
+               <id>nexus</id>
+               <name>insta-releases-repo</name>
+               <url>http://47.128.220.140:8081/repository/insta-releases/</url>   
+         </repository> 
+         <snapshotRepository>
+               <id>nexus</id>
+               <name>insta-snapshot-repo</name>
+               <url>http://47.128.220.140:8081/repository/insta-snapshot/</url>   
+         </snapshotRepository>     
+    </distributionManagement>         
+
     <build>
         <plugins>
             <plugin>
