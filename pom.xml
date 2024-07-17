@@ -34,12 +34,12 @@
          <repository>
                <id>nexus</id>
                <name>insta-releases-repo</name>
-               <url>http://13.212.239.192:8081/repository/insta-releases/</url>   
+               <url>http://54.255.228.109:8081/repository/insta-releases/</url>   
          </repository> 
          <snapshotRepository>
                <id>nexus</id>
                <name>insta-snapshot-repo</name>
-               <url>http://13.212.239.192:8081/repository/insta-snapshot/</url>   
+               <url>http://54.255.228.109:8081/repository/insta-snapshot/</url>   
          </snapshotRepository>     
     </distributionManagement>         
 
