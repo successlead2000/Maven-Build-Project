@@ -1,0 +1,33 @@
+node{ //this is for master node
+
+// this is a variable for maven installation on jenkins server
+def mavenHome = tool name: "maven-3.9.8"
+
+//source code management
+stage('CheckoutCode'){
+git branch: 'master', url: 'https://github.com/successlead2000/Maven-Build-Project.git'
+}
+
+//build artifact by using source code
+stage('BuildArtifact'){
+sh "$mavenHome/bin/mvn clean package"
+}
+
+//Generate SonarQube Report
+stage('SonarQubeReport'){
+sh "$mavenHome/bin/mvn sonar:sonar"    
+}
+
+//Upload artifact into Nexus Server
+stage('UploadArtifactNexus'){
+sh "$mavenHome/bin/mvn deploy"
+}
+
+//Upload artifact into Tomcat application server
+stage('DeployIntoTomcat'){
+sshagent(['85a57377-cdac-4e1a-9ac3-317c8ba52953']) {
+sh "scp -o StrictHostKeyChecking=no target/my-web-app-1.0-SNAPSHOT.war ubuntu@13.215.185.44:/opt/tomcat/apache-tomcat-10.1.26/webapps"    
+}
+}
+
+} //node closing
