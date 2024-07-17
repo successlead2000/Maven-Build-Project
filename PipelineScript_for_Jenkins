@@ -33,7 +33,7 @@ sh "$mavenHome/bin/mvn deploy"
 //Upload artifact into Tomcat application server
 stage('DeployIntoTomcat'){
 sshagent(['85a57377-cdac-4e1a-9ac3-317c8ba52953']) {
-sh "scp -o StrictHostKeyChecking=no target/my-web-app-1.0-SNAPSHOT.war ubuntu@13.215.185.44:/opt/tomcat/apache-tomcat-10.1.26/webapps"    
+sh "scp -o StrictHostKeyChecking=no target/my-web-app-1.0-SNAPSHOT.war ubuntu@18.143.75.72:/opt/tomcat/apache-tomcat-10.1.26/webapps"    
 }
 }
 
