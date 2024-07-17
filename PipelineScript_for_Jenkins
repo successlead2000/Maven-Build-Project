@@ -1,4 +1,9 @@
-node{ //this is for master node
+//this is for master Node
+node{ 
+
+echo "The Node name is: ${env.NODE_NAME}"
+echo "The Job name is: ${env.JOB_NAME}"
+echo "The Build number is: $env.BUILD_NUMBER}"
 
 // this is a variable for maven installation on jenkins server
 def mavenHome = tool name: "maven-3.9.8"
