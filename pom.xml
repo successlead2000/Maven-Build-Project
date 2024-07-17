@@ -11,7 +11,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <sonar.projectKey>com.example:my-web-app</sonar.projectKey>
-        <sonar.host.url>http://54.151.243.201:9000/</sonar.host.url>
+        <sonar.host.url>http://47.128.255.176:9000/</sonar.host.url>
         <sonar.login>squ_0f19c3c4e0d48a282536c30bef0cf5b4926c98e2</sonar.login>
     </properties>
 
@@ -34,12 +34,12 @@
          <repository>
                <id>nexus</id>
                <name>insta-releases-repo</name>
-               <url>http://54.255.228.109:8081/repository/insta-releases/</url>   
+               <url>http://13.212.204.133:8081/repository/insta-releases/</url>   
          </repository> 
          <snapshotRepository>
                <id>nexus</id>
                <name>insta-snapshot-repo</name>
-               <url>http://54.255.228.109:8081/repository/insta-snapshot/</url>   
+               <url>http://13.212.204.133:8081/repository/insta-snapshot/</url>   
          </snapshotRepository>     
     </distributionManagement>         
 
