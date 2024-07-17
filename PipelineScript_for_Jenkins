@@ -1,4 +1,4 @@
-//this is for master Node
+//This is for master Node
 node{ 
 
 echo "The Node name is: ${env.NODE_NAME}"
